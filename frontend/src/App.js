@@ -36,9 +36,9 @@ function App() {
         <h3>Shopping Categories</h3>
         <button className="sidebar-close-button" onClick={closeMenu}>X</button>
         <ul>
-          <li><a href="index.html">TV and Audio</a></li>
+          <li><a href="/">TV and Audio</a></li>
 
-          <li><a href="index.html">Videogames</a></li>
+          <li><a href="/">Videogames</a></li>
         </ul>
       </aside>
 
