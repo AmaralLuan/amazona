@@ -1,16 +1,37 @@
-import React from 'react';
+import React, {  useEffect } from 'react';
 import {Link} from 'react-router-dom';
-import data from '../data';
+import { listProducts } from '../actions/productActions';
+import {useDispatch, useSelector} from 'react-redux';
 
+// renderiza a página principal  
 
 function HomeScreen (props) {
-    return <ul className="products">
+    // define o estado da aplicação e traz as informações do backend
+    const productList = useSelector(state => state.productList);
+    const {products, loading, error} = productList;
+    const dispatch = useDispatch();
+
+    useEffect(() => {
+        dispatch(listProducts());
+      return () => {
+        //
+      };
+    }, [])
+
+    // retorna todos os produtos da Homepage
+
+    return loading? <div>loading...</div> : 
+    error? <div>{error}</div>:
+    <ul className="products">
+
     {
 
-      data.products.map(product => 
-        <li>
+      // usa a função map pra renderizar dinamicamente cada produto do objeto data.js
+
+      products.map(product => 
+        <li key={product._id}>
           <div className="product">
-          <Link to={'product/' + product._id}>
+          <Link to={'products/' + product._id}>
                 <img src={product.image} alt="product" className="product-image"></img>
           </Link>  
             <div className="product-name">

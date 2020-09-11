@@ -1,6 +1,7 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 import data from '../data';
+import axios from 'axios';
 
 function ProductScreen (props) {
     console.log(props.match.params.id);
@@ -74,4 +75,7 @@ function ProductScreen (props) {
         </div>
 }
 
+
+const { mainscreen } = axios.get("http://localhost:3000");
+console.log(mainscreen);
 export default ProductScreen;
