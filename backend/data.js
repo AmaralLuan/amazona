@@ -8,7 +8,8 @@ export default {
             price: 25,
             brand: 'JBL',
             rating: 5.9,
-            numReviews: 10
+            numReviews: 10,
+            countInStock: 6
         },
         {
             _id: '2',
@@ -18,7 +19,8 @@ export default {
             price: 20,
             brand: 'Sony',
             rating: 6.3,
-            numReviews: 9
+            numReviews: 9,
+            countInStock: 7
         },
         {
             _id: '3',
@@ -28,7 +30,8 @@ export default {
             price: 22,
             brand: 'Xiaomi',
             rating: 8.9,
-            numReviews: 11
+            numReviews: 11,
+            countInStock: 10
         },
         {
             _id: '4',
@@ -37,7 +40,8 @@ export default {
             price: 299,
             brand: 'Panasonic',
             rating: 6.9,
-            numReviews: 14
+            numReviews: 14,
+            countInStock: 12
         },
         {
             _id: '5',
@@ -47,7 +51,8 @@ export default {
             price: 22,
             brand: 'Xiaomi',
             rating: 8.9,
-            numReviews: 11
+            numReviews: 11,
+            countInStock: 122
         },
         {
             _id: '6',
@@ -57,7 +62,8 @@ export default {
             price: 22,
             brand: 'Xiaomi',
             rating: 8.9,
-            numReviews: 11
+            numReviews: 11,
+            countInStock: 0
         }
 
 ]
